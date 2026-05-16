@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { useDigitalClock } from '../hooks/useDigitalClock'
 import ClockDisplay from './ClockDisplay'
 import EnergyPanel from './EnergyPanel'
@@ -5,6 +6,28 @@ import ModeSelector from './ModeSelector'
 
 export default function ClockUI() {
   const t = useDigitalClock();
+  const [dangerFlash, setDangerFlash] = useState(false)
+
+const prevAmpm = useRef(t.ampm)
+
+useEffect(() => {
+  if (prevAmpm.current !== t.ampm) {
+    triggerDanger()
+    prevAmpm.current = t.ampm
+  }
+}, [t.ampm])
+
+const triggerDanger = () => {
+  setDangerFlash(false)
+
+  requestAnimationFrame(() => {
+    setDangerFlash(true)
+
+    setTimeout(() => {
+      setDangerFlash(false)
+    }, 220)
+  })
+}
 
   return (
     <div className="main-ui crt w-screen h-screen overflow-hidden grid grid-rows-[1fr_auto]">
@@ -35,7 +58,10 @@ export default function ClockUI() {
         </div>
 
         {/* BOTTOM */}
-        <ModeSelector />
+        <ModeSelector
+  onTriggerDanger={triggerDanger}
+  dangerFlash={dangerFlash}
+/>
       </div>
     </div>
   )

@@ -162,3 +162,29 @@ html, body, #root {
   .landscape-warning { display: none; }
   .main-ui           { display: flex; }
 }
+
+@keyframes dangerFlash {
+  0% {
+    filter: brightness(1);
+  }
+
+  20% {
+    filter: brightness(1.9);
+  }
+
+  40% {
+    filter: brightness(1);
+  }
+
+  65% {
+    filter: brightness(1.7);
+  }
+
+  85% {
+    filter: brightness(1);
+  }
+
+  100% {
+    filter: brightness(1);
+  }
+}
