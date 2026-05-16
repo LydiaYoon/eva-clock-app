@@ -9,12 +9,12 @@ export default function ModeSelector() {
 
   return (
     <div className="flex items-stretch justify-between gap-[1vw] overflow-hidden">
-      <div className="flex-1 h-[14vh] bg-[linear-gradient(to_right,#976e19,#a29923,#7d8c1b,#577d1f)] pl-[20vh] pr-[1vh] py-[2vh] flex items-center gap-[1vw] overflow-hidden">
+      <div className="flex-1 h-[18vh] bg-[linear-gradient(to_right,#976e19,#a29923,#7d8c1b,#577d1f)] pl-[20vh] pr-[4vh] py-[2vh] flex items-center gap-[4vw] overflow-hidden">
         {MODES.map((mode) => (
           <button
             key={mode}
             onClick={() => setActiveMode(mode)}
-            className="panel-button flex-1 h-full flex flex-col justify-between py-[0.8vh] px-[0.35vw] overflow-hidden"
+            className="panel-button flex-1 h-full flex flex-col items-center justify-between py-[0.8vh] px-[0.35vw] overflow-hidden"
           >
             <div className="flex-1 flex items-center justify-center text-[2.8vw] glow whitespace-nowrap overflow-hidden text-ellipsis">
               {mode}
@@ -24,7 +24,7 @@ export default function ModeSelector() {
         ))}
       </div>
 
-      <div className="h-[14vh] pl-[1vh] pr-[7vh] py-[2vh] flex items-center gap-[1vw] overflow-hidden">
+      <div className="h-[18vh] pl-[2vh] pr-[16vh] py-[2vh] flex items-center overflow-hidden">
         <div
           className="w-[12vw] min-w-[170px] h-full border-2 border-[#c12600] bg-black flex flex-col items-center justify-center overflow-hidden px-[0.2vw]"
         >

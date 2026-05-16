@@ -5,32 +5,33 @@ interface ClockDisplayProps {
   flash: boolean
 }
 
-const DIGIT_STYLE_LG: CSSProperties = {
-  fontSize: '13.8vw',
+const DIGIT_STYLE: CSSProperties = {
   fontFamily: 'DigitalNumbers, monospace',
   fontWeight: 400,
   fontVariantNumeric: 'tabular-nums',
-  letterSpacing: '-0.2em',
-  lineHeight: 1,
-  textAlign: 'right',
+  letterSpacing: '-0.1em',
 }
 
-const DIGIT_STYLE_SM: CSSProperties = {
-  fontSize: '7vw',
-  fontFamily: 'DigitalNumbers, monospace',
-  fontWeight: 400,
-  fontVariantNumeric: 'tabular-nums',
-  letterSpacing: '-0.04em',
+const COLON_STYLE: CSSProperties = {
+  fontFamily: 'DigitalColon, monospace',
+}
+
+const LARGE_STYLE: CSSProperties = {
+  fontSize: '16vw',
+  lineHeight: 1,
+}
+
+const SMALL_STYLE: CSSProperties = {
+  fontSize: '10vw',
   lineHeight: 1,
   paddingBottom: '0.35vw',
-  textAlign: 'right',
 }
 
 export default function ClockDisplay({ time, flash }: ClockDisplayProps) {
   const cls = `digit glow ${flash ? 'flash' : ''}`
 
   return (
-    <div className="grid grid-cols-[5vw_1fr] items-center overflow-hidden">
+    <div className="grid grid-cols-[7vw_1fr] items-center overflow-hidden">
 
       <div className="flex justify-center items-start h-full pt-[1vh]">
         <div className="text-[2.5vw] jp glow leading-none">
@@ -38,14 +39,27 @@ export default function ClockDisplay({ time, flash }: ClockDisplayProps) {
         </div>
       </div>
 
-      <div className="flex items-end justify-end overflow-hidden pr-[1vw]">
+      <div className="flex items-end justify-center overflow-hidden pr-[1vw]">
 
-        <div className="flex items-end justify-end leading-none overflow-hidden">
-          <div className={cls} style={DIGIT_STYLE_LG}>
-            {time.slice(0, 5)}
+        <div className="flex items-end justify-center leading-none overflow-hidden">
+          <div className={cls} style={{...DIGIT_STYLE, ...LARGE_STYLE}}>
+            {time.slice(0, 2)}
           </div>
-          <div className={cls} style={DIGIT_STYLE_SM}>
-            {time.slice(5)}
+
+          <span style={{...COLON_STYLE, ...LARGE_STYLE}}>
+            :
+          </span>
+
+          <div className={cls} style={{...DIGIT_STYLE, ...LARGE_STYLE}}>
+            {time.slice(3, 5)}
+          </div>
+
+          <span style={{...COLON_STYLE, ...SMALL_STYLE}}>
+            :
+          </span>
+
+          <div className={cls} style={{...DIGIT_STYLE, ...SMALL_STYLE}}>
+            {time.slice(6)}
           </div>
         </div>
       </div>
