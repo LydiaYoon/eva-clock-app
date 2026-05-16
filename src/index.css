@@ -1,0 +1,128 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); */
+
+@font-face {
+  font-family: "DigitalNumbers";
+  src: url("/src/assets/fonts/sa-digital-number.ttf") format("truetype");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  font-family: 'Lato', sans-serif;
+}
+
+/* CRT scanlines overlay */
+.crt::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.03) 0px,
+    rgba(255,255,255,0.03) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  opacity: 0.28;
+  mix-blend-mode: soft-light;
+}
+
+/* CRT noise overlay */
+.crt::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255,120,0,0.03), transparent 24%),
+    radial-gradient(circle at 80% 40%, rgba(0,255,100,0.03), transparent 24%),
+    radial-gradient(circle at 50% 80%, rgba(255,190,0,0.03), transparent 24%);
+  animation: noise 0.2s infinite alternate;
+}
+
+@keyframes noise {
+  from { transform: translateY(0px); }
+  to   { transform: translateY(-2px); }
+}
+
+/* Amber glow text */
+.glow {
+  color: #e79a00;
+  text-shadow:
+    0 0 2px rgba(231,154,0,0.55),
+    0 0 6px rgba(255,170,0,0.3);
+}
+
+/* Japanese compressed text */
+.jp {
+  font-family: 'Times New Roman', serif;
+  font-weight: 700;
+  transform: scaleX(0.79);
+  transform-origin: left center;
+  display: inline-block;
+  letter-spacing: -0.03em;
+}
+
+/* Digit idle flicker */
+.digit {
+  font-family: 'DigitalNumbers', monospace;
+  transition: opacity 0.08s ease;
+  animation: idleFlicker 5s infinite;
+}
+
+.digit.flash {
+  opacity: 0.55;
+}
+
+@keyframes idleFlicker {
+  0%, 98%, 100% { filter: brightness(1); }
+  99%           { filter: brightness(1.18); }
+}
+
+/* Mode selector buttons */
+.panel-button {
+  border: 2px solid rgba(255,170,0,0.45);
+  background: rgba(0,0,0,0.82);
+  transition: all 0.15s ease;
+  box-shadow: inset 0 0 10px rgba(231,154,0,0.08);
+}
+
+/* Indicator strip inside button */
+.panel-light {
+  width: calc(100% + 1vw);
+  margin-left: -0.5vw;
+  height: 28%;
+  background: transparent;
+  transition: all 0.15s ease;
+}
+
+.panel-light.active {
+  background: #c12600;
+  box-shadow:
+    0 0 8px rgba(193,38,0,0.7),
+    0 0 18px rgba(193,38,0,0.3);
+}
+
+/* Orientation guards */
+@media (orientation: portrait) {
+  .landscape-warning { display: flex; }
+  .main-ui           { display: none; }
+}
+
+@media (orientation: landscape) {
+  .landscape-warning { display: none; }
+  .main-ui           { display: flex; }
+}
