@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react'
+import DigitalClock from './DigitClock'
 
 interface ClockDisplayProps {
   time: string
@@ -31,7 +32,7 @@ export default function ClockDisplay({ time, flash }: ClockDisplayProps) {
   const cls = `digit glow ${flash ? 'flash' : ''}`
 
   return (
-    <div className="grid grid-cols-[7vw_1fr] items-center overflow-hidden">
+    <div className="grid grid-cols-[5.2vw_1fr] items-center overflow-hidden">
 
       <div className="flex items-start h-full pt-[1vh]">
         <div className="text-[2.5vw] jp glow leading-none">
@@ -39,10 +40,12 @@ export default function ClockDisplay({ time, flash }: ClockDisplayProps) {
         </div>
       </div>
 
-      <div className="flex items-end justify-center overflow-hidden">
+      <div className="flex items-end overflow-hidden">
 
-        <div className="flex items-end justify-center leading-none overflow-hidden">
-          <div className={cls} style={{...DIGIT_STYLE, ...LARGE_STYLE}}>
+        <div className="flex items-end leading-none overflow-hidden">
+          <DigitalClock />
+
+          {/* <div className={cls} style={{...DIGIT_STYLE, ...LARGE_STYLE}}>
             {time.slice(0, 2)}
           </div>
 
@@ -60,7 +63,7 @@ export default function ClockDisplay({ time, flash }: ClockDisplayProps) {
 
           <div className={cls} style={{...DIGIT_STYLE, ...SMALL_STYLE}}>
             {time.slice(6)}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

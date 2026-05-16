@@ -26,7 +26,7 @@ export default function ModeSelector() {
 
       <div className="h-[18vh] pl-[2vh] pr-[16vh] py-[2vh] flex items-center overflow-hidden">
         <div
-          className="w-[12vw] min-w-[170px] h-full border-2 border-[#c12600] bg-black flex flex-col items-center justify-center overflow-hidden px-[0.2vw]"
+          className="w-[12vw] min-w-[100px] h-full border-2 border-[#c12600] bg-black flex flex-col items-center justify-center overflow-hidden px-[0.2vw]"
         >
           <div className="text-[2.8vw] leading-none glow whitespace-nowrap"
           style={{ color: '#c12600' }}>
