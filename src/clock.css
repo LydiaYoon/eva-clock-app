@@ -42,7 +42,7 @@
 	display: inline-block;
 }
 .digital-watch svg .segment {
-	fill: rgba(255,255,255,.1);
+	fill: rgba(100, 100, 100, 0.2);
 	/* transition: .3s ease-in-out; */
 	transition: 
 		fill 0.3s ease,
