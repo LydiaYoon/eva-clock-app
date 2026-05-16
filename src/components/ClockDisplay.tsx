@@ -33,13 +33,13 @@ export default function ClockDisplay({ time, flash }: ClockDisplayProps) {
   return (
     <div className="grid grid-cols-[7vw_1fr] items-center overflow-hidden">
 
-      <div className="flex justify-center items-start h-full pt-[1vh]">
+      <div className="flex items-start h-full pt-[1vh]">
         <div className="text-[2.5vw] jp glow leading-none">
           あと
         </div>
       </div>
 
-      <div className="flex items-end justify-center overflow-hidden pr-[1vw]">
+      <div className="flex items-end justify-center overflow-hidden">
 
         <div className="flex items-end justify-center leading-none overflow-hidden">
           <div className={cls} style={{...DIGIT_STYLE, ...LARGE_STYLE}}>

@@ -13,11 +13,11 @@ export default function ClockUI() {
       <div className="relative w-full h-full overflow-hidden grid grid-rows-[1fr_auto]">
         
         {/* TOP AREA */}
-        <div className="grid grid-cols-[1fr_20vw] gap-[1.2vw] overflow-hidden px-[2.2vw] py-[2vh] border border-[#d68c00]">
+        <div className="grid grid-cols-[1fr_20vw] overflow-hidden px-[4vw] py-[2vh] border border-[#d68c00]">
           
           {/* LEFT */}
           <div className="grid grid-rows-[auto_1fr] overflow-hidden">
-            <div className="flex items-end gap-[1vw] pt-[0.5vh] overflow-hidden">
+            <div className="flex items-end pt-[0.5vh] overflow-hidden gap-[0vw]">
               <div className="text-[4.6vw] jp glow leading-none whitespace-nowrap">
                 活動限界まで
               </div>
@@ -30,9 +30,11 @@ export default function ClockUI() {
             <ClockDisplay time={time} flash={flash} />
           </div>
 
+          {/* RIGHT */}
           <EnergyPanel />
         </div>
 
+        {/* BOTTOM */}
         <ModeSelector />
       </div>
     </div>

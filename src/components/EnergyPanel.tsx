@@ -14,14 +14,14 @@ function HatchPanel({ label, labelEn }: HatchPanelProps) {
           {labelEn}
         </div>
       </div>
-      <div className="w-[28%] bg-[repeating-linear-gradient(135deg,#c12600_0px,#c12600_14px,#140000_14px,#140000_28px)]" />
+      <div className="w-[28%] bg-[repeating-linear-gradient(135deg,#c12600_0px,#c12600_15px,#140000_15px,#140000_30px)]" />
     </div>
   )
 }
 
 export default function EnergyPanel() {
   return (
-    <div className="flex flex-col gap-[1.2vh] overflow-hidden min-w-0 pt-[0.2vh] w-full h-full">
+    <div className="flex flex-col gap-[2vh] overflow-hidden min-w-0 w-full h-full justify-center ">
       <HatchPanel label="内部" labelEn="INTERNAL" />
 
       <div className="w-full border border-[#d68c00] px-[0.5vw] py-[0.35vh] overflow-hidden min-w-0">
