@@ -16,10 +16,10 @@ function Digit({ value }: { value: string }) {
 }
 
 export default function DigitalClock() {
-  const t = useDigitalClock()
+  const t = useDigitalClock();
 
   return (
-    <div className="digital-watch">
+    <div className="digital-watch glow-bold">
       {/* SVG defs (한 번만) */}
       <svg width="0" height="0">
         <defs>

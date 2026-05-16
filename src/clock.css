@@ -43,7 +43,10 @@
 }
 .digital-watch svg .segment {
 	fill: rgba(255,255,255,.1);
-	transition: .3s ease-in-out;
+	/* transition: .3s ease-in-out; */
+	transition: 
+		fill 0.3s ease,
+    filter 0.3s ease;
 }
 .digital-watch svg.num-1 .b,
 .digital-watch svg.num-1 .c,
@@ -104,4 +107,8 @@
 .digital-watch svg.num-0 .e,
 .digital-watch svg.num-0 .f {
 	fill: #e79a00;
+	/* filter:
+		drop-shadow(0 0 6px rgba(255,140,0,0.95))
+		drop-shadow(0 0 14px rgba(255,120,0,0.45))
+		drop-shadow(0 0 24px rgba(255,60,0,0.22)); */
 }

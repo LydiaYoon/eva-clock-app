@@ -1,35 +1,11 @@
-import type { CSSProperties } from 'react'
+import { ClockState } from '../hooks/useDigitalClock'
 import DigitalClock from './DigitClock'
 
 interface ClockDisplayProps {
-  time: string
-  flash: boolean
+  time: ClockState
 }
 
-const DIGIT_STYLE: CSSProperties = {
-  fontFamily: 'DigitalNumbers, monospace',
-  fontWeight: 400,
-  fontVariantNumeric: 'tabular-nums',
-  letterSpacing: '-0.1em',
-}
-
-const COLON_STYLE: CSSProperties = {
-  fontFamily: 'DigitalColon, monospace',
-}
-
-const LARGE_STYLE: CSSProperties = {
-  fontSize: '16vw',
-  lineHeight: 1,
-}
-
-const SMALL_STYLE: CSSProperties = {
-  fontSize: '10vw',
-  lineHeight: 1,
-  paddingBottom: '0.35vw',
-}
-
-export default function ClockDisplay({ time, flash }: ClockDisplayProps) {
-  const cls = `digit glow ${flash ? 'flash' : ''}`
+export default function ClockDisplay(t: ClockDisplayProps) {
 
   return (
     <div className="grid grid-cols-[5.2vw_1fr] items-center overflow-hidden">
@@ -44,26 +20,6 @@ export default function ClockDisplay({ time, flash }: ClockDisplayProps) {
 
         <div className="flex items-end leading-none overflow-hidden">
           <DigitalClock />
-
-          {/* <div className={cls} style={{...DIGIT_STYLE, ...LARGE_STYLE}}>
-            {time.slice(0, 2)}
-          </div>
-
-          <span style={{...COLON_STYLE, ...LARGE_STYLE}}>
-            :
-          </span>
-
-          <div className={cls} style={{...DIGIT_STYLE, ...LARGE_STYLE}}>
-            {time.slice(3, 5)}
-          </div>
-
-          <span style={{...COLON_STYLE, ...SMALL_STYLE}}>
-            :
-          </span>
-
-          <div className={cls} style={{...DIGIT_STYLE, ...SMALL_STYLE}}>
-            {time.slice(6)}
-          </div> */}
         </div>
       </div>
     </div>

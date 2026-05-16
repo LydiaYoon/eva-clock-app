@@ -1,10 +1,10 @@
-import useClock from '../hooks/useClock'
+import { useDigitalClock } from '../hooks/useDigitalClock'
 import ClockDisplay from './ClockDisplay'
 import EnergyPanel from './EnergyPanel'
 import ModeSelector from './ModeSelector'
 
 export default function ClockUI() {
-  const { time, flash } = useClock()
+  const t = useDigitalClock();
 
   return (
     <div className="main-ui crt w-screen h-screen overflow-hidden grid grid-rows-[1fr_auto]">
@@ -27,11 +27,11 @@ export default function ClockUI() {
               </div>
             </div>
 
-            <ClockDisplay time={time} flash={flash} />
+            <ClockDisplay time={t} />
           </div>
 
           {/* RIGHT */}
-          <EnergyPanel />
+          <EnergyPanel ampm={t.ampm} />
         </div>
 
         {/* BOTTOM */}
