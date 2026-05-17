@@ -6,6 +6,20 @@
 	margin: 0px 14px;
 	font-size: 0;
 
+	-webkit-filter: 
+    drop-shadow(0 0 2px rgba(255,140,0,0.95));
+  filter:
+    drop-shadow(0 0 2px rgba(255,140,0,0.95));
+
+	/* -webkit-filter: 
+    drop-shadow(0 0 2px rgba(255,140,0,0.95))
+    drop-shadow(0 0 10px rgba(255,120,0,0.45))
+    drop-shadow(0 0 18px rgba(255,60,0,0.22));
+  filter:
+    drop-shadow(0 0 2px rgba(255,140,0,0.95))
+    drop-shadow(0 0 10px rgba(255,120,0,0.45))
+    drop-shadow(0 0 18px rgba(255,60,0,0.22)); */
+
 	svg {
 		margin: 6px;
 	}
@@ -107,8 +121,4 @@
 .digital-watch svg.num-0 .e,
 .digital-watch svg.num-0 .f {
 	fill: #e79a00;
-	/* filter:
-		drop-shadow(0 0 6px rgba(255,140,0,0.95))
-		drop-shadow(0 0 14px rgba(255,120,0,0.45))
-		drop-shadow(0 0 24px rgba(255,60,0,0.22)); */
 }

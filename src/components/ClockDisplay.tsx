@@ -16,9 +16,9 @@ export default function ClockDisplay(t: ClockDisplayProps) {
         </div>
       </div>
 
-      <div className="flex items-end overflow-hidden">
+      <div className="flex items-end overflow-visible">
 
-        <div className="flex items-end leading-none overflow-hidden">
+        <div className="flex items-end leading-none overflow-visible">
           <DigitalClock />
         </div>
       </div>

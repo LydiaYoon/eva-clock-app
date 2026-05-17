@@ -30,13 +30,13 @@ const triggerDanger = () => {
 }
 
   return (
-    <div className="main-ui crt w-screen h-screen overflow-hidden grid grid-rows-[1fr_auto]">
+    <div className="main-ui crt w-screen h-dvh overflow-hidden grid grid-rows-[1fr_auto]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,170,0,0.03),transparent_60%)]" />
 
       <div className="relative w-full h-full overflow-hidden grid grid-rows-[1fr_auto]">
         
         {/* TOP AREA */}
-        <div className="grid grid-cols-[1fr_20vw] overflow-hidden px-[4vw] py-[2vh] border border-[#d68c00]">
+        <div className="grid grid-cols-[1fr_20vw] overflow-hidden px-[4vw] pt-[3vh] pb-[2vh] border border-[#d68c00]">
           
           {/* LEFT */}
           <div className="grid grid-rows-[auto_1fr] overflow-hidden">
@@ -59,9 +59,9 @@ const triggerDanger = () => {
 
         {/* BOTTOM */}
         <ModeSelector
-  onTriggerDanger={triggerDanger}
-  dangerFlash={dangerFlash}
-/>
+          onTriggerDanger={triggerDanger}
+          dangerFlash={dangerFlash}
+        />
       </div>
     </div>
   )

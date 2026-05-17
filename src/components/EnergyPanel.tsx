@@ -10,7 +10,7 @@ interface EnergyPanelProps {
 
 function HatchPanel({ label, labelEn, active }: HatchPanelProps) {
   return (
-    <div className={`w-full border border-[#d68c00] flex overflow-hidden min-w-0 glow-pannel 
+    <div className={`w-full border border-[#d68c00] flex overflow-visible min-w-0 glow-pannel 
     ${active
   ? `
     opacity-100
@@ -22,7 +22,7 @@ function HatchPanel({ label, labelEn, active }: HatchPanelProps) {
     brightness-75
   `
 }`}>
-      <div className="flex-1 p-[0.35vw] overflow-hidden min-w-0 items-center">
+      <div className="flex-1 p-[0.35vw] overflow-visible min-w-0 items-center">
         <div className="text-[8.2vw] jp glow leading-none whitespace-nowrap tracking-[-0.12em]">
           {label}
         </div>
@@ -32,10 +32,10 @@ function HatchPanel({ label, labelEn, active }: HatchPanelProps) {
       </div>
       <div className={`
     w-[28%]
-    bg-[repeating-linear-gradient(135deg,#c12600_0px,#c12600_15px,#140000_15px,#140000_30px)]
+    bg-[repeating-linear-gradient(135deg,#c12600_0px,#c12600_15px,transparent_15px,transparent_30px)]
     transition-all
     duration-500
-
+    shadow-[0_0_10px_rgba(193,38,0,0.18)]
     ${
       active
         ? 'brightness-125'
@@ -50,10 +50,10 @@ export default function EnergyPanel({
   ampm,
 }: EnergyPanelProps) {
   return (
-    <div className="flex flex-col gap-[2vh] overflow-hidden min-w-0 w-full h-full justify-center ">
+    <div className="flex flex-col gap-[2vh] overflow-visible min-w-0 w-full h-full justify-center ">
       <HatchPanel label="内部" labelEn="INTERNAL" active={ampm === 'AM'}/>
 
-      <div className="w-full border border-[#d68c00] px-[0.5vw] py-[0.35vh] overflow-hidden min-w-0 glow-pannel">
+      <div className="w-full border border-[#d68c00] px-[0.5vw] py-[0.35vh] overflow-visible min-w-0 glow-pannel">
         <div className="text-[2.7vw] jp glow leading-none whitespace-nowrap tracking-[-0.055em]">
           主電源供給システム
         </div>

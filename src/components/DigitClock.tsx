@@ -3,7 +3,7 @@ import '../clock.css';
 
 function Digit({ value }: { value: string }) {
   return (
-    <svg className={`digit num-${value} w-[7.8vw] h-auto`} viewBox="0 0 260 480">
+    <svg className={`digit num-${value} w-[7.8vw] h-auto`} viewBox="0 0 260 480" overflow="visible">
       <use href="#unit-h" className="segment a" x="30" y="0" />
       <use href="#unit-v" className="segment b" x="220" y="30" />
       <use href="#unit-v" className="segment c" x="220" y="250" />
@@ -19,7 +19,7 @@ export default function DigitalClock() {
   const t = useDigitalClock();
 
   return (
-    <div className="digital-watch glow-bold">
+    <div className="digital-watch glow-bold overflow-visible">
       {/* SVG defs (한 번만) */}
       <svg width="0" height="0">
         <defs>
@@ -32,17 +32,17 @@ export default function DigitalClock() {
         </defs>
       </svg>
 
-      <div className="hour">
+      <div className="hour overflow-visible">
         <Digit value={t.h1} />
         <Digit value={t.h2} />
       </div>
 
-      <div className="minute">
+      <div className="minute overflow-visible">
         <Digit value={t.m1} />
         <Digit value={t.m2} />
       </div>
 
-      <div className="second">
+      <div className="second overflow-visible">
         <Digit value={t.s1} />
         <Digit value={t.s2} />
       </div>

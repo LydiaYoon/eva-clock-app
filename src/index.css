@@ -85,17 +85,23 @@ html, body, #root {
 }
 
 .glow-bold {
+  display: flex;
+  margin: 0;
+
+  -webkit-filter: 
+    drop-shadow(0 0 10px rgba(255,120,0,0.45));
   filter:
-    drop-shadow(0 0 2px rgba(255,140,0,0.95))
-    drop-shadow(0 0 10px rgba(255,120,0,0.45))
-    drop-shadow(0 0 18px rgba(255,60,0,0.22));
+    drop-shadow(0 0 10px rgba(255,120,0,0.45));
 }
 
 .glow-pannel {
   /* text-shadow:
   0 0 1px rgba(231,154,0,0.55),
   0 0 2px rgba(255,170,0,0.3); */
-
+  -webkit-filter: 
+    drop-shadow(0 0 0px rgba(255,140,0,0.95))
+    drop-shadow(0 0 6px rgba(255,120,0,0.45))
+    drop-shadow(0 0 12px rgba(255,60,0,0.22));
   filter:
     drop-shadow(0 0 0px rgba(255,140,0,0.95))
     drop-shadow(0 0 6px rgba(255,120,0,0.45))
@@ -165,26 +171,22 @@ html, body, #root {
 
 @keyframes dangerFlash {
   0% {
-    filter: brightness(1);
+    filter: brightness(0.45);
   }
 
-  20% {
-    filter: brightness(1.9);
+  24% {
+    filter: brightness(2);
   }
 
-  40% {
-    filter: brightness(1);
+  46% {
+    filter: brightness(0.45);
   }
 
-  65% {
+  72% {
     filter: brightness(1.7);
   }
 
-  85% {
-    filter: brightness(1);
-  }
-
   100% {
-    filter: brightness(1);
+    filter: brightness(0.45);
   }
 }
