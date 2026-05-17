@@ -20,7 +20,7 @@ function DangerIndicator({
         ${
           flash
             ? `
-              animate-[dangerFlash_4s_ease]
+              animate-[dangerFlash_2s_linear_2]
               brightness-150
               shadow-[0_0_6px_rgba(193,38,0,0.7)]
             `

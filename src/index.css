@@ -1,15 +1,7 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); */
-
 @font-face {
-  font-family: "DigitalNumbers";
-  src: url("/src/assets/fonts/sa-digital-number.ttf") format("truetype");
+  font-family: "Lato-Regular";
+  src: url("./src/assets/fonts/Lato-Regular.ttf") format("truetype");
 }
-
-@font-face {
-  font-family: "DigitalColon";
-  src: url("/src/assets/fonts/DS-DIGIB.TTF") format("truetype");
-}
-
 
 @tailwind base;
 @tailwind components;
@@ -37,7 +29,7 @@ html, body, #root {
   height: 100%;
   overflow: hidden;
   background: #000;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato-Regular', sans-serif;
 }
 
 /* CRT scanlines overlay */
@@ -110,7 +102,7 @@ html, body, #root {
 
 /* Japanese compressed text */
 .jp {
-  font-family: 'Times New Roman', serif;
+  font-family: 'Times Roman', serif;
   font-weight: 700;
   transform: scaleX(0.79);
   transform-origin: left center;
@@ -120,7 +112,6 @@ html, body, #root {
 
 /* Digit idle flicker */
 .digit {
-  font-family: 'DigitalNumbers', monospace;
   transition: opacity 0.08s ease;
   animation: idleFlicker 5s infinite;
 }
