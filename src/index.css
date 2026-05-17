@@ -1,7 +1,7 @@
-@font-face {
+/* @font-face {
   font-family: "Times-New-Roman";
   src: url("./src/assets/fonts/Times-New-Roman.ttf") format("truetype");
-}
+} */
 
 @tailwind base;
 @tailwind components;
@@ -110,17 +110,19 @@ html, body, #root {
 /* Japanese compressed text */
 .jp {
   font-family:
-  "Times-New-Roman",
-  "Times New Roman",
-  "Times Roman",
-  "Times",
-  "Georgia",
+  "Noto Serif JP",
   serif;
-  font-weight: 700;
-  transform: scaleX(0.79);
-  transform-origin: left center;
   display: inline-block;
   letter-spacing: -0.03em;
+}
+
+.jp-bold {
+  font-weight: 900;
+}
+
+.jp-title {
+  transform: scaleX(0.79);
+  transform-origin: left center;
 }
 
 /* Digit idle flicker */

@@ -23,10 +23,10 @@ function HatchPanel({ label, labelEn, active }: HatchPanelProps) {
       `
     }`}>
       <div className="flex-1 p-[0.35vw] overflow-visible min-w-0 flex flex-col items-center justify-center">
-        <div className="text-[8.2vw] jp glow leading-none whitespace-nowrap tracking-[-0.12em]" style={{ transformOrigin: 'center' }}>
+        <div className="text-[7.6vw] jp jp-bold glow leading-none whitespace-nowrap" style={{ transformOrigin: 'center' }}>
           {label}
         </div>
-        <div className="text-[3vw] leading-none mt-[0.05vh] glow whitespace-nowrap tracking-[-0.04em]">
+        <div className="text-[3vw] leading-none mt-[0.05vh] glow whitespace-nowrap">
           {labelEn}
         </div>
       </div>
@@ -53,8 +53,8 @@ export default function EnergyPanel({
     <div className="flex flex-col gap-[2vh] overflow-visible min-w-0 w-full h-full justify-center">
       <HatchPanel label="内部" labelEn="INTERNAL" active={ampm === 'AM'}/>
 
-      <div className="w-full border border-[#d68c00] px-[0.5vw] py-[0.35vh] overflow-visible min-w-0 glow-pannel flex flex-col items-center justify-center origin-center">
-        <div className="text-[2.7vw] jp glow leading-none whitespace-nowrap tracking-[-0.055em] origin-center" style={{ transformOrigin: 'center' }}>
+      <div className="w-full border border-[#d68c00] px-[0.5vw] py-[0.35vh] overflow-visible min-w-0 glow-pannel flex flex-col items-center justify-center">
+        <div className="text-[2.4vw] jp glow leading-none whitespace-nowrap tracking-[-0.055em]" style={{ transformOrigin: 'center' }}>
           主電源供給システム
         </div>
         <div className="text-[1.3vw] mt-[0.06vh] opacity-90 glow leading-none whitespace-nowrap tracking-[-0.02em]">

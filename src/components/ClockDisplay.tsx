@@ -8,10 +8,10 @@ interface ClockDisplayProps {
 export default function ClockDisplay(t: ClockDisplayProps) {
 
   return (
-    <div className="grid grid-cols-[5.2vw_1fr] items-center overflow-hidden">
+    <div className="grid grid-cols-[5.6vw_1fr] items-center overflow-hidden">
 
       <div className="flex items-start h-full pt-[1vh]">
-        <div className="text-[2.5vw] jp glow leading-none">
+        <div className="text-[2.8vw] jp jp-title jp-bold glow leading-none">
           あと
         </div>
       </div>

@@ -36,12 +36,12 @@ const triggerDanger = () => {
       <div className="relative w-full h-full overflow-hidden grid grid-rows-[1fr_auto]">
         
         {/* TOP AREA */}
-        <div className="grid grid-cols-[1fr_20.2vw] overflow-hidden px-[4vw] pt-[3vh] pb-[2vh] border border-[#d68c00]">
+        <div className="grid grid-cols-[1fr_22vw] overflow-hidden px-[4vw] pt-[3vh] pb-[2vh] border border-[#d68c00]">
           
           {/* LEFT */}
           <div className="grid grid-rows-[auto_1fr] overflow-hidden">
             <div className="flex items-end pt-[0.5vh] overflow-hidden gap-[0vw]">
-              <div className="text-[4.6vw] jp glow leading-none whitespace-nowrap">
+              <div className="text-[4.8vw] jp jp-title jp-bold glow leading-none whitespace-nowrap">
                 活動限界まで
               </div>
 
