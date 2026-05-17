@@ -21,6 +21,10 @@ body {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 html, body, #root {
@@ -29,7 +33,6 @@ html, body, #root {
   height: 100%;
   overflow: hidden;
   background: #000;
-  font-family: 'Lato-Regular', sans-serif;
 }
 
 /* CRT scanlines overlay */
@@ -72,8 +75,8 @@ html, body, #root {
 .glow {
   color: #e79a00;
   text-shadow:
-  0 0 1px rgba(255,140,0,0.95),
-  0 0 2px rgba(255,120,0,0.45);
+  0 0 2px rgba(255,140,0,0.95),
+  0 0 4px rgba(255,120,0,0.45);
 }
 
 .glow-bold {
@@ -81,9 +84,9 @@ html, body, #root {
   margin: 0;
 
   -webkit-filter: 
-    drop-shadow(0 0 10px rgba(255,120,0,0.45));
+    drop-shadow(0 0 14px rgba(255,60,0,0.45));
   filter:
-    drop-shadow(0 0 10px rgba(255,120,0,0.45));
+    drop-shadow(0 0 14px rgba(255,60,0,0.45));
 }
 
 .glow-pannel {
@@ -92,17 +95,26 @@ html, body, #root {
   0 0 2px rgba(255,170,0,0.3); */
   -webkit-filter: 
     drop-shadow(0 0 0px rgba(255,140,0,0.95))
-    drop-shadow(0 0 6px rgba(255,120,0,0.45))
-    drop-shadow(0 0 12px rgba(255,60,0,0.22));
+    drop-shadow(0 0 4px rgba(255,120,0,0.45))
+    drop-shadow(0 0 10px rgba(255,60,0,0.22));
   filter:
     drop-shadow(0 0 0px rgba(255,140,0,0.95))
-    drop-shadow(0 0 6px rgba(255,120,0,0.45))
-    drop-shadow(0 0 12px rgba(255,60,0,0.22));
+    drop-shadow(0 0 4px rgba(255,120,0,0.45))
+    drop-shadow(0 0 10px rgba(255,60,0,0.22));
+
+    box-shadow: 
+    5px 5px 15px rgba(0, 0, 0, 0.3),      /* Outer shadow */
+    inset 5px 5px 10px rgba(0, 0, 0, 0.2); /* Inner shadow */
 }
 
 /* Japanese compressed text */
 .jp {
-  font-family: 'Times Roman', serif;
+  font-family:
+  "Times New Roman",
+  "Times Roman",
+  "Times",
+  "Georgia",
+  serif;
   font-weight: 700;
   transform: scaleX(0.79);
   transform-origin: left center;
@@ -127,10 +139,12 @@ html, body, #root {
 
 /* Mode selector buttons */
 .panel-button {
-  border: 2px solid rgba(255,170,0,0.45);
+  border: 2px solid rgba(214,140,0,0.85);
   background: rgba(0,0,0,0.82);
   transition: all .3s ease;
-  box-shadow: inset 0 0 10px rgba(231,154,0,0.08);
+  box-shadow: 
+    0 0 10px rgba(231,154,0,0.08),      /* Outer shadow */
+    inset 0 0 10px rgba(231,154,0,0.08); /* Inner shadow */
 }
 
 /* Indicator strip inside button */

@@ -36,7 +36,7 @@ const triggerDanger = () => {
       <div className="relative w-full h-full overflow-hidden grid grid-rows-[1fr_auto]">
         
         {/* TOP AREA */}
-        <div className="grid grid-cols-[1fr_20vw] overflow-hidden px-[4vw] pt-[3vh] pb-[2vh] border border-[#d68c00]">
+        <div className="grid grid-cols-[1fr_20.2vw] overflow-hidden px-[4vw] pt-[3vh] pb-[2vh] border border-[#d68c00]">
           
           {/* LEFT */}
           <div className="grid grid-rows-[auto_1fr] overflow-hidden">

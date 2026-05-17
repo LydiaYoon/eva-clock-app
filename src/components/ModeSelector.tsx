@@ -16,7 +16,8 @@ function DangerIndicator({
 }) {
   return (
      <div
-      className={`w-[12vw] min-w-[100px] h-full border-2 border-[#c12600] flex flex-col items-center justify-center overflow-visible px-[0.2vw] transition-all duration-150
+      className={`w-[12vw] min-w-[120px] h-full border-2 border-[#c12600] shadow-[0_0_10px_rgba(193,38,0,0.95),_inset_0_0_10px_rgba(193,38,0,0.95)]
+        flex flex-col items-center justify-center overflow-visible px-[0.2vw] transition-all duration-150
         ${
           flash
             ? `
@@ -29,13 +30,13 @@ function DangerIndicator({
             `}
           >
           <div
-            className="text-[2.8vw] leading-none whitespace-nowrap transition-all duration-150"
+            className="text-[2.8vw] leading-none whitespace-nowrap transition-all duration-150 glow-red"
             style={{ color: '#c12600', textShadow: `0 0 10px rgba(255,60,0,0.95)` }}
           >
             DANGER
           </div>
           <div
-            className="text-[1.35vw] mt-[0.55vh] tracking-[0.08em] leading-none whitespace-nowrap transition-all duration-150"
+            className="text-[1.35vw] mt-[0.55vh] tracking-[0.08em] leading-none whitespace-nowrap transition-all duration-150 glow-red"
             style={{ color: '#c12600', textShadow: `0 0 10px rgba(255,60,0,0.95)` }}
           >
             EMERGENCY
