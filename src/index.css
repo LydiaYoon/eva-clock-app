@@ -198,3 +198,74 @@ html, body, #root {
     filter: brightness(0.45);
   }
 }
+
+.tv-glitch {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+  z-index: 9999;
+
+  opacity: 0;
+
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.08) 0px,
+      rgba(255,255,255,0.08) 1px,
+      transparent 2px,
+      transparent 6px
+    );
+
+  mix-blend-mode: screen;
+
+  animation: tvGlitch 7s infinite;
+}
+
+@keyframes tvGlitch {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+    filter: none;
+  }
+
+  92% {
+    opacity: 0;
+    filter: none;
+  }
+
+  93% {
+    opacity: 0.22;
+    transform: translateX(-2px);
+    filter:
+      drop-shadow(-2px 0 rgba(255,0,0,0.18))
+      drop-shadow(2px 0 rgba(0,180,255,0.18));
+  }
+
+  94% {
+    opacity: 0.12;
+    transform: translateX(3px);
+    filter:
+      drop-shadow(-1px 0 rgba(255,0,0,0.12))
+      drop-shadow(1px 0 rgba(0,180,255,0.12));
+  }
+
+  95% {
+    opacity: 0.28;
+    transform: translateX(-1px);
+    filter:
+      drop-shadow(-2px 0 rgba(255,0,0,0.18))
+      drop-shadow(2px 0 rgba(0,180,255,0.18));
+  }
+
+  96% {
+    opacity: 0;
+    transform: translateX(0);
+    filter: none;
+  }
+
+  100% {
+    opacity: 0;
+    filter: none;
+  }
+}

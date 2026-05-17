@@ -32,7 +32,7 @@ const triggerDanger = () => {
   return (
     <div className="main-ui crt w-screen h-dvh overflow-hidden grid grid-rows-[1fr_auto]">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,170,0,0.03),transparent_60%)]" />
-
+      <div className="tv-glitch" />
       <div className="relative w-full h-full overflow-hidden grid grid-rows-[1fr_auto]">
         
         {/* TOP AREA */}
