@@ -23,7 +23,7 @@ function HatchPanel({ label, labelEn, active }: HatchPanelProps) {
       `
     }`}>
       <div className="flex-1 p-[0.35vw] overflow-visible min-w-0 flex flex-col items-center justify-center">
-        <div className="text-[7.6vw] jp jp-bold glow leading-none whitespace-nowrap" style={{ transformOrigin: 'center' }}>
+        <div className="text-[7.6vw] pb-[1vh] jp jp-bold glow leading-none whitespace-nowrap" style={{ transformOrigin: 'center' }}>
           {label}
         </div>
         <div className="text-[3vw] leading-none mt-[0.05vh] glow whitespace-nowrap">

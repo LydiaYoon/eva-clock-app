@@ -40,12 +40,13 @@ const triggerDanger = () => {
           
           {/* LEFT */}
           <div className="grid grid-rows-[auto_1fr] overflow-hidden">
-            <div className="flex items-end pt-[0.5vh] overflow-hidden gap-[0vw]">
+            {/* <div className="flex items-end pt-[0.5vh] overflow-hidden gap-[0vw]"> */}
+            <div className="grid grid-cols-[23vw_1fr] items-end pt-[0.5vh] overflow-hidden gap-[0vw]">
               <div className="text-[4.8vw] jp jp-title jp-bold glow leading-none whitespace-nowrap">
                 活動限界まで
               </div>
 
-              <div className="text-[1.9vw] glow whitespace-nowrap">
+              <div className="text-[1.9vw] glow whitespace-nowrap -left-10">
                 ACTIVE TIME REMAINING:
               </div>
             </div>
