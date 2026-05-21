@@ -14,7 +14,7 @@ function HatchPanel({ label, labelEn, active }: HatchPanelProps) {
     ${active
       ? `
         opacity-100
-        brightness-125
+        brightness-100
         shadow-[0_0_12px_rgba(231,154,0,0.18)]
       `
       : `
@@ -38,7 +38,7 @@ function HatchPanel({ label, labelEn, active }: HatchPanelProps) {
     shadow-[0_0_12px_rgba(193,38,0,0.18)]
     ${
       active
-        ? 'brightness-125'
+        ? 'brightness-100'
         : 'brightness-50'
     }
   `} />

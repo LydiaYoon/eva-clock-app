@@ -6,7 +6,7 @@ export default function LandscapeWarning() {
           EVA CLOCK
         </div>
         <div className="text-lg text-orange-300 opacity-80">
-          모바일 가로모드로 돌려줘 📱🔄
+          !! LANDSCAPE MODE REQUIRED !!
         </div>
       </div>
     </div>
